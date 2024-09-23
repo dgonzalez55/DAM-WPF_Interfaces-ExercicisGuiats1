@@ -1,0 +1,23 @@
+﻿<Window x:Class="Ex9_UIAdapter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex9_UIAdapter"
+        mc:Ignorable="d"
+        Title="UI-Adapter" Height="131" Width="340">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Nom:" Grid.Row="0" Grid.Column="0" Margin="5,5,5,5"/>
+        <TextBox Name="NomTextBox" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5"/>
+        <Button Grid.Row="1" Grid.ColumnSpan="2" Content="Enviar" 
+                VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="20"/>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Ex5_FormVàlid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex5_FormVàlid"
+        mc:Ignorable="d"
+        Title="Form Vàlid" Height="231" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Name="NomTextBox" Width="200" Height="30"
+             ToolTip="Introdueix el teu nom" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="1" Name="EdatTextBox" Width="200" Height="30"
+             ToolTip="Introdueix la teva edat" HorizontalAlignment="Center"/>
+        <Button Grid.Row="2" Content="Enviar" Width="200"  Height="30"
+            HorizontalAlignment="Center" Click="EnviarButton_Click"/>
+    </Grid>
+
+</Window>

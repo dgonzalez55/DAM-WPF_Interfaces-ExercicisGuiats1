@@ -1,0 +1,26 @@
+﻿<Window x:Class="Ex7_Multimedia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex7_Multimedia"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Source="resources/Aloy.jpg" Width="300" Height="Auto" Margin="5" />
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <MediaElement Name="VideoElement" Source="resources/pets.mp4"
+                LoadedBehavior="Manual" UnloadedBehavior="Stop"
+                Width="400" Height="250" Margin="5" MediaEnded="VideoElement_MediaEnded" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Reproduïr" Width="100" Height="30" Margin="5" Click="Button_Play" />
+                <Button Content="Pausar" Width="100" Height="30" Margin="5" Click="Button_Pause" />
+                <Button Content="Aturar" Width="100" Height="30" Margin="5" Click="Button_Aturar" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
